@@ -92,6 +92,7 @@ const els = {
   riskMeterTrack: document.getElementById('risk-meter-track'),
   riskMeterCaption: document.getElementById('risk-meter-caption'),
   highlightsCard: document.getElementById('highlights-card'),
+  highlightsFilter: document.getElementById('highlights-filter'),
   highlightsList: document.getElementById('highlights-list'),
   trendStats: document.getElementById('trend-stats'),
   trendStatsNote: document.getElementById('trend-stats-note'),
@@ -258,14 +259,54 @@ function escapeHtml(str) {
   ));
 }
 
-function renderHighlights(entry) {
-  const list = entry.highlights;
-  if (!list || list.length === 0) {
-    els.highlightsCard.hidden = true;
+// 대표 CVE 목록 심각도 필터: 도넛 차트·범례(renderSeverity)는 항상 전체 분포를 보여주고,
+// 이 필터는 highlights-card 목록에만 적용된다 (카드 5 회귀 검사 8번 기준).
+const SEVERITY_LEVELS_FOR_HIGHLIGHTS = [
+  ['CRITICAL', SEVERITY_LABEL_KO.CRITICAL, SEVERITY_COLOR.CRITICAL],
+  ['HIGH', SEVERITY_LABEL_KO.HIGH, SEVERITY_COLOR.HIGH],
+  ['MEDIUM', SEVERITY_LABEL_KO.MEDIUM, SEVERITY_COLOR.MEDIUM],
+  ['LOW', SEVERITY_LABEL_KO.LOW, SEVERITY_COLOR.LOW],
+];
+const HIGHLIGHT_FILTER_VALUES = ['ALL', 'CRITICAL', 'HIGH', 'MEDIUM', 'LOW'];
+let highlightFilter = 'ALL'; // 새로고침(페이지 재로드) 시 항상 초기화됨 — 세션 메모리 상태
+let currentHighlightsList = null;
+
+function setHighlightFilter(value) {
+  // 알 수 없는 값이 들어와도 앱이 깨지지 않고 "전체"로 안전하게 처리
+  highlightFilter = HIGHLIGHT_FILTER_VALUES.includes(value) ? value : 'ALL';
+  renderHighlightsFilter();
+  renderHighlightsList();
+}
+
+function renderHighlightsFilter() {
+  if (!currentHighlightsList) {
+    els.highlightsFilter.innerHTML = '';
     return;
   }
-  els.highlightsCard.hidden = false;
-  els.highlightsList.innerHTML = list
+  const options = [['ALL', '전체', '#a8a8b0'], ...SEVERITY_LEVELS_FOR_HIGHLIGHTS];
+  els.highlightsFilter.innerHTML = options
+    .map(([value, label, color]) => {
+      const active = value === highlightFilter;
+      const style = active ? `color:${color};border-color:${color};background:${color}26` : '';
+      return `<button type="button" class="hl-filter-btn${active ? ' active' : ''}" data-filter="${value}" style="${style}" aria-pressed="${active}">${escapeHtml(label)}</button>`;
+    })
+    .join('');
+  els.highlightsFilter.querySelectorAll('[data-filter]').forEach((btn) => {
+    btn.addEventListener('click', () => setHighlightFilter(btn.dataset.filter));
+  });
+}
+
+function renderHighlightsList() {
+  const list = currentHighlightsList || [];
+  const filtered = highlightFilter === 'ALL' ? list : list.filter((h) => h.severity === highlightFilter);
+
+  if (filtered.length === 0) {
+    const label = SEVERITY_LABEL_KO[highlightFilter] || '전체';
+    els.highlightsList.innerHTML = `<li class="highlights-empty">해당 심각도(${escapeHtml(label)})의 대표 CVE 없음</li>`;
+    return;
+  }
+
+  els.highlightsList.innerHTML = filtered
     .map((h) => {
       const color = SEVERITY_COLOR[h.severity] || '#5a5a62';
       const label = SEVERITY_LABEL_KO[h.severity] || h.severity;
@@ -281,6 +322,19 @@ function renderHighlights(entry) {
       </li>`;
     })
     .join('');
+}
+
+function renderHighlights(entry) {
+  const list = entry.highlights;
+  if (!list || list.length === 0) {
+    els.highlightsCard.hidden = true;
+    currentHighlightsList = null;
+    return;
+  }
+  els.highlightsCard.hidden = false;
+  currentHighlightsList = list;
+  renderHighlightsFilter();
+  renderHighlightsList();
 }
 
 function renderTrendStats(data) {
