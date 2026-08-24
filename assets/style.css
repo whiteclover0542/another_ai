@@ -312,6 +312,12 @@ header h1 {
   margin: 1rem 0 0;
 }
 
+.highlights-filter-hint {
+  color: var(--muted);
+  font-size: 0.78rem;
+  margin: 0 0 0.6rem;
+}
+
 .highlights-filter {
   display: flex;
   flex-wrap: wrap;
