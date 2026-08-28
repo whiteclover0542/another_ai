@@ -218,5 +218,49 @@
         "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N"
       }
     ]
+  },
+  {
+    "date": "2026-08-28",
+    "count": 485,
+    "unit": "건",
+    "timezone": "Asia/Seoul",
+    "sourceApiUrl": "https://services.nvd.nist.gov/rest/json/cves/2.0?pubStartDate=2026-08-27T15%3A00%3A00.000Z&pubEndDate=2026-08-28T07%3A13%3A58.240Z&resultsPerPage=1",
+    "queriedAtUtc": "2026-08-28T07:13:58.240Z",
+    "severity": {
+      "critical": 4,
+      "high": 19,
+      "medium": 25,
+      "low": 7,
+      "unrated": 430
+    },
+    "highlights": [
+      {
+        "id": "CVE-2026-81702",
+        "severity": "CRITICAL",
+        "summaryEn": "openssl_encrypt before 1.4.9 fails to re-derive and validate fingerprints when loading identities from identity.json, allowing attackers to…",
+        "summaryKo": null,
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-81702",
+        "cvssScore": 9.8,
+        "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      {
+        "id": "CVE-2026-81707",
+        "severity": "CRITICAL",
+        "summaryEn": "openssl_encrypt before 1.4.9 fails to sanitize the email field of imported identity documents, allowing attackers to inject ANSI escape sequ…",
+        "summaryKo": null,
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-81707",
+        "cvssScore": 9.8,
+        "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      {
+        "id": "CVE-2026-81735",
+        "severity": "CRITICAL",
+        "summaryEn": "startServer.ts in the mcp-http-server package of UI-TARS-desktop defaulted its listen address to '::' when no host was given, so startSseAnd…",
+        "summaryKo": null,
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-81735",
+        "cvssScore": 10,
+        "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+      }
+    ]
   }
 ]
