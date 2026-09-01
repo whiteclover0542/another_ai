@@ -394,5 +394,49 @@
         "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
       }
     ]
+  },
+  {
+    "date": "2026-09-01",
+    "count": 201,
+    "unit": "건",
+    "timezone": "Asia/Seoul",
+    "sourceApiUrl": "https://services.nvd.nist.gov/rest/json/cves/2.0?pubStartDate=2026-08-31T15%3A00%3A00.000Z&pubEndDate=2026-09-01T02%3A11%3A43.499Z&resultsPerPage=1",
+    "queriedAtUtc": "2026-09-01T02:11:43.499Z",
+    "severity": {
+      "critical": 3,
+      "high": 13,
+      "medium": 12,
+      "low": 2,
+      "unrated": 171
+    },
+    "highlights": [
+      {
+        "id": "CVE-2026-82954",
+        "severity": "CRITICAL",
+        "summaryEn": "A vulnerability was detected in Dokploy up to 0.29.7. This issue affects the function writeTraefikConfigInPath of the file packages/server/s…",
+        "summaryKo": "Dokploy에서 최대 0.29.7의 취약점이 탐지되었습니다. 이 문제는 파일 패키지/서버/s의 writeTraefikConfigInPath 함수에 영향을 미칩니다.…",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82954",
+        "cvssScore": 9.9,
+        "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+      },
+      {
+        "id": "CVE-2026-82971",
+        "severity": "CRITICAL",
+        "summaryEn": "A vulnerability was determined in QVidium Opera11 3.3.2a26-Ax4x-opera11. This affects an unknown part of the file /cgi-bin/net_tr.cgi of the…",
+        "summaryKo": "QVidium Opera11 3.3.2a26-Ax4x-opera11에서 취약점이 확인되었습니다. 이것은 파일/cgi-bin/net_tr.cgi의 알 수 없는 부분에 영향을 미칩니다.…",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82971",
+        "cvssScore": 10,
+        "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+      },
+      {
+        "id": "CVE-2026-83524",
+        "severity": "CRITICAL",
+        "summaryEn": "A security vulnerability has been detected in RedPort Optimizer wXa-203, Optimizer wXa-213 and Optimizer wXa-223 up to 20260704. This impact…",
+        "summaryKo": "RedPort Optimizer wXa-203, Optimizer wXa-213 및 Optimizer wXa-223에서 최대 20260704의 보안 취약점이 탐지되었습니다. 이 영향은…",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83524",
+        "cvssScore": 9.9,
+        "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+      }
+    ]
   }
 ]
