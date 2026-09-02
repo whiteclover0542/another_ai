@@ -438,5 +438,49 @@
         "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
       }
     ]
+  },
+  {
+    "date": "2026-09-02",
+    "count": 319,
+    "unit": "건",
+    "timezone": "Asia/Seoul",
+    "sourceApiUrl": "https://services.nvd.nist.gov/rest/json/cves/2.0?pubStartDate=2026-09-01T15%3A00%3A00.000Z&pubEndDate=2026-09-02T01%3A34%3A50.825Z&resultsPerPage=1",
+    "queriedAtUtc": "2026-09-02T01:34:50.825Z",
+    "severity": {
+      "critical": 4,
+      "high": 15,
+      "medium": 19,
+      "low": 0,
+      "unrated": 281
+    },
+    "highlights": [
+      {
+        "id": "CVE-2023-54391",
+        "severity": "CRITICAL",
+        "summaryEn": "Proxmox Virtual Environment (VE) 7.0 through 8.0 contains an authentication bypass vulnerability in libpve-access-control before 8.0.4 that…",
+        "summaryKo": "Proxmox Virtual Environment (VE) 7.0부터 8.0까지 8.0.4 이전 버전의 libpve-access-control에 인증 무시 취약점이 있습니다.…",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-54391",
+        "cvssScore": 9.8,
+        "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      {
+        "id": "CVE-2026-84479",
+        "severity": "CRITICAL",
+        "summaryEn": "WWBN AVideo (current e01e41ecc and earlier) makes three login-time security controls depend solely on the client-supplied User-Agent header.…",
+        "summaryKo": "WWBN AVideo (현재 e01e41ecc 및 이전 버전) 는 세 가지 로그인 시간 보안 제어를 클라이언트에서 제공한 User-Agent 헤더에만 의존합니다.…",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84479",
+        "cvssScore": 9.1,
+        "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      },
+      {
+        "id": "CVE-2026-84480",
+        "severity": "CRITICAL",
+        "summaryEn": "WWBN AVideo fails to validate password recovery token expiration in userRecoverPassSave.json.php, allowing attackers to use expired tokens t…",
+        "summaryKo": "WWBN AVideo는 userRecoverPassSave.json.php에서 암호 복구 토큰 만료 유효성을 검사하지 못하므로 공격자는 만료된 토큰을 사용할 수 있습니다.…",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84480",
+        "cvssScore": 9.8,
+        "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ]
   }
 ]
