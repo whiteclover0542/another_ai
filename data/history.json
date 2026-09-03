@@ -482,5 +482,49 @@
         "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
       }
     ]
+  },
+  {
+    "date": "2026-09-03",
+    "count": 166,
+    "unit": "건",
+    "timezone": "Asia/Seoul",
+    "sourceApiUrl": "https://services.nvd.nist.gov/rest/json/cves/2.0?pubStartDate=2026-09-02T15%3A00%3A00.000Z&pubEndDate=2026-09-03T01%3A38%3A40.508Z&resultsPerPage=1",
+    "queriedAtUtc": "2026-09-03T01:38:40.508Z",
+    "severity": {
+      "critical": 1,
+      "high": 6,
+      "medium": 13,
+      "low": 0,
+      "unrated": 146
+    },
+    "highlights": [
+      {
+        "id": "CVE-2026-66786",
+        "severity": "CRITICAL",
+        "summaryEn": "A flaw was found in submariner. In cert-auth mode, the connection configuration is built using free-form strings from the Custom Resource De…",
+        "summaryKo": "잠수함에서 결함이 발견되었습니다. cert-auth 모드에서 연결 구성은 Custom Resource De의 자유 형식 문자열을 사용하여 빌드됩니다.…",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66786",
+        "cvssScore": 9.1,
+        "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H"
+      },
+      {
+        "id": "CVE-2026-18058",
+        "severity": "HIGH",
+        "summaryEn": "The mobile Smart Connect dashboard UI was subject to manipulation\nby 3rd party apps. When paired with a phishing attack, this manipulation c…",
+        "summaryKo": "모바일 Smart Connect 대시보드 UI가 조작 대상이었습니다.\n타사 앱을 통해. 피싱 공격과 짝을 이룰 때, 이 조작 c…",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18058",
+        "cvssScore": 7.5,
+        "cvssVector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:H"
+      },
+      {
+        "id": "CVE-2026-78408",
+        "severity": "HIGH",
+        "summaryEn": "The nsenter --join-cgroup option opens the target cgroup.procs file as root and leaves that file descriptor open across later namespace and…",
+        "summaryKo": "Nsenter --join-cgroup 옵션은 대상 cgroup.procs 파일을 루트로 열고 해당 파일 설명자를 이후 네임스페이스 및…",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78408",
+        "cvssScore": 7.9,
+        "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:N/I:H/A:H"
+      }
+    ]
   }
 ]
