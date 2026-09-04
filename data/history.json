@@ -526,5 +526,49 @@
         "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:N/I:H/A:H"
       }
     ]
+  },
+  {
+    "date": "2026-09-04",
+    "count": 232,
+    "unit": "건",
+    "timezone": "Asia/Seoul",
+    "sourceApiUrl": "https://services.nvd.nist.gov/rest/json/cves/2.0?pubStartDate=2026-09-03T15%3A00%3A00.000Z&pubEndDate=2026-09-04T01%3A32%3A16.271Z&resultsPerPage=1",
+    "queriedAtUtc": "2026-09-04T01:32:16.271Z",
+    "severity": {
+      "critical": 20,
+      "high": 46,
+      "medium": 23,
+      "low": 1,
+      "unrated": 142
+    },
+    "highlights": [
+      {
+        "id": "CVE-2026-85183",
+        "severity": "CRITICAL",
+        "summaryEn": "Taipy configures its socket.io server with wildcard CORS origin and credential flag enabled, allowing any web page to establish credentialed…",
+        "summaryKo": "Taipy는 와일드카드 CORS 원본 및 자격 증명 플래그가 활성화된 socket.io 서버를 구성하여 모든 웹 페이지가 자격 증명을 설정할 수 있도록 합니다.…",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85183",
+        "cvssScore": 9.3,
+        "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N"
+      },
+      {
+        "id": "CVE-2026-85394",
+        "severity": "CRITICAL",
+        "summaryEn": "python-jose through 3.5.0 fails to properly validate asymmetric keys in HMAC initialization, accepting DER-encoded public keys that lack PEM…",
+        "summaryKo": "python-jose through 3.5.0은 HMAC 초기화에서 비대칭 키를 제대로 검증하지 못하고 PEM이 없는 DER 인코딩된 공개 키를 허용합니다.…",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85394",
+        "cvssScore": 9.1,
+        "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      },
+      {
+        "id": "CVE-2026-85222",
+        "severity": "CRITICAL",
+        "summaryEn": "A vulnerability has been found in D-Link DNS-340L 1.01B04. Affected by this vulnerability is an unknown functionality of the file /cgi-bin/a…",
+        "summaryKo": "D-Link DNS-340L 1.01 B04에서 취약성이 발견되었습니다. 이 취약점의 영향을 받는 것은/cgi-bin/a 파일의 알 수 없는 기능입니다.…",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85222",
+        "cvssScore": 9.1,
+        "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H"
+      }
+    ]
   }
 ]
