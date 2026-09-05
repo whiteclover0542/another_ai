@@ -570,5 +570,49 @@
         "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H"
       }
     ]
+  },
+  {
+    "date": "2026-09-05",
+    "count": 415,
+    "unit": "건",
+    "timezone": "Asia/Seoul",
+    "sourceApiUrl": "https://services.nvd.nist.gov/rest/json/cves/2.0?pubStartDate=2026-09-04T15%3A00%3A00.000Z&pubEndDate=2026-09-05T01%3A33%3A36.072Z&resultsPerPage=1",
+    "queriedAtUtc": "2026-09-05T01:33:36.072Z",
+    "severity": {
+      "critical": 8,
+      "high": 36,
+      "medium": 47,
+      "low": 2,
+      "unrated": 322
+    },
+    "highlights": [
+      {
+        "id": "CVE-2026-85661",
+        "severity": "CRITICAL",
+        "summaryEn": "excel-mcp-server 0.1.8 fails to enforce path confinement in stdio mode when EXCEL_FILES_PATH is unset, allowing attackers to read and write…",
+        "summaryKo": "eXCEL_FILES_PATH가 설정되지 않은 경우 excel-mcp-server 0.1.8은 stdio 모드에서 경로 제한을 적용하지 못하므로 공격자가 읽고 쓸 수 있습니다.…",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85661",
+        "cvssScore": 9.8,
+        "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      {
+        "id": "CVE-2026-85667",
+        "severity": "CRITICAL",
+        "summaryEn": "xiaobei through 5.5.2 fails to implement authentication or signature validation on webhook endpoints, allowing unauthenticated attackers to…",
+        "summaryKo": "xiaobei ~ 5.5.2는 웹훅 엔드포인트에서 인증 또는 서명 유효성 검사를 구현하지 못하여 인증되지 않은 공격자가…",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85667",
+        "cvssScore": 9.1,
+        "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      },
+      {
+        "id": "CVE-2026-85672",
+        "severity": "CRITICAL",
+        "summaryEn": "zerox 1.1.20 contains an OS command injection vulnerability in the file download mechanism where the temporary file extension derived from d…",
+        "summaryKo": "zerox 1.1.20에는 d에서 파생된 임시 파일 확장명이 있는 파일 다운로드 메커니즘에 OS 명령 주입 취약성이 있습니다.…",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85672",
+        "cvssScore": 9.8,
+        "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ]
   }
 ]
